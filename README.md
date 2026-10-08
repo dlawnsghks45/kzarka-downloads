@@ -6,7 +6,7 @@
 
 Windows 설치 파일은 [Releases](https://github.com/dlawnsghks45/kzarka-downloads/releases)에서 제공합니다. 이 저장소에는 공개 홈페이지의 빌드 결과와 배포 안내만 보관합니다.
 
-최신 버전은 [0.1.22](https://github.com/dlawnsghks45/kzarka-downloads/releases/tag/v0.1.22)입니다. **앱은 Discord 로그인이 필수입니다.** 공식 서버 `https://kzarka-overlay.onrender.com`을 통한 공개 0.1.0 패키지의 실제 소유자 로그인, 개인 기록 API 접근, 앱 재시작 시 로그인 복구와 로그아웃을 확인했습니다. 0.1.1 패키지도 네이티브 화면에서 실제 로그인, 암호화된 인증 정보 저장과 로그아웃을 확인했습니다. 일반 사용자는 기록 서버나 업데이트 주소를 입력·변경하지 않으며 앱에 포함된 공식 주소를 사용합니다. 로그인 화면에서도 앱 업데이트를 확인할 수 있습니다.
+최신 버전은 [0.1.23](https://github.com/dlawnsghks45/kzarka-downloads/releases/tag/v0.1.23)입니다. **앱은 Discord 로그인이 필수입니다.** 공식 서버 `https://kzarka-overlay.onrender.com`을 통한 공개 0.1.0 패키지의 실제 소유자 로그인, 개인 기록 API 접근, 앱 재시작 시 로그인 복구와 로그아웃을 확인했습니다. 0.1.1 패키지도 네이티브 화면에서 실제 로그인, 암호화된 인증 정보 저장과 로그아웃을 확인했습니다. 일반 사용자는 기록 서버나 업데이트 주소를 입력·변경하지 않으며 앱에 포함된 공식 주소를 사용합니다. 로그인 화면에서도 앱 업데이트를 확인할 수 있습니다.
 
 **0.1.5·0.1.6 업데이트 실패 복구:** 앱을 종료한 뒤 0.1.7 설치 파일을 기존 설치 위치에 한 번 덮어 설치해 주세요. 앱 제거는 필요 없으며 기록·설정을 유지합니다. 이전 업데이트 기능이 앱 묶음 파일을 잘못 읽는 오류가 있어 스스로 수정 코드를 받을 수 없습니다. 0.1.7은 실제 파일을 읽도록 수정했으며 창 없는 Electron 환경에서도 검사합니다.
 
@@ -21,3 +21,7 @@ Neon 데이터베이스의 실제 TLS 연결과 스키마 적용, 소유자의 �
 설치 파일은 현재 코드 서명되지 않았습니다. Windows 게시자·평판 경고와 백신 탐지는 서로 다른 판정이며, 무경고·무검출을 보장하지 않습니다. 배포 파일의 SHA-256은 각 릴리스에서 확인할 수 있습니다. 보안 프로그램 해제나 예외 등록을 요구하지 않습니다.
 
 실제 게임 수집 정확도와 운영사 허용 여부는 별도 검증이 필요합니다. 검은사막의 공식 제품이 아니며 게임 관련 이미지·명칭의 권리는 각 권리자에게 있습니다. 보스 이미지 출처는 `bosses/SOURCES.md`에 기록합니다.
+
+**0.1.23 — 스킬 캐시 직업 추정과 경험치 OCR:** 저장된 스킬로 직업과 가능한 전승·각성을 추정합니다. 검은사막 게임 창의 제한된 영역에서 사냥 중 60초(선택 30초) 간격으로 레벨·경험치%를 읽고, 증가분을 대시보드·기록·기존 사냥 오버레이와 OBS 사냥 소스에 표시합니다. 캐시는 현재 캐릭터나 프리셋의 확정 근거가 아니며, 경험치는 절대 EXP가 아닌 레벨·퍼센트 기준입니다. 전리품 드롭은 기존 패킷 수집을 유지하며 저장된 사냥 목표와 기록을 보존합니다. 실제 게임 정확도와 FPS는 아직 측정하지 않았습니다.
+
+**0.1.23 — Saved-skill class estimates and experience OCR:** Estimate class and supported specialization from saved skills. During hunting, read level and experience percentage from a bounded Black Desert window region every 60 seconds (optionally 30), and show gains in the dashboard, records, existing hunt overlay and its OBS source. Cached skills do not confirm the current character or preset; experience uses level and percentage rather than absolute XP. Loot drops still use packet collection. Saved hunting goals and records are preserved. Live accuracy and FPS have not been measured.
